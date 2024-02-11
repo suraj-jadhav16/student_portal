@@ -38,12 +38,14 @@ $pagination = ceil($student_obj->getTotal('subscribe_course') / Student::$perPag
                 <tr>
                     <th scope="col">Student Name</th>
                     <th scope="col">Course Name</th>
+                    <th scope="col">Test</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php while ($subscribe_course = $subscribe_courses->fetch_array()){ ?>
                     <tr>
                         <td><?= $subscribe_course['full_name'] ?></td>
+                        <td><?= $subscribe_course['course_name'] ?></td>
                         <td><?= $subscribe_course['course_name'] ?></td>
                     </tr>
                 <?php } ?>
